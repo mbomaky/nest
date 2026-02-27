@@ -26,4 +26,4 @@ lerna-debug.log*
 /generated/prisma
 
 # ide
-.idea
+/.idea/
