@@ -1,8 +1,12 @@
 import {Injectable} from "@nestjs/common";
+import {Flower} from "~/../generated/prisma/client";
+import {PrismaService} from "./prisma.service";
 
 @Injectable()
 export class FlowersService {
-  getAllFlowers(): string[] {
-    return ["Flowers1", "Flowers2", "Flowers3"];
+  constructor(private readonly prisma: PrismaService) {}
+
+  getAllFlowers(): Promise<Flower[]> {
+    return this.prisma.flower.findMany();
   }
 }
