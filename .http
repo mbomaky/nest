@@ -1,0 +1,8 @@
+### Создание нового заказа
+POST http://localhost:3000/order
+Content-Type: application/json
+
+{
+  "orderId": 13,
+  "user": "Faker"
+}
