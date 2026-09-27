@@ -1,0 +1,15 @@
+@GATEWAY_PORT = 4000
+
+### GET request to gateway
+GET http://localhost:{{GATEWAY_PORT}}
+
+### GET request tohralth check
+GET http://localhost:{{GATEWAY_PORT}}/health
+
+### OTP
+POST http://localhost:{{GATEWAY_PORT}}/auth/otp/send
+Content-Type: application/json
+
+{
+
+}
