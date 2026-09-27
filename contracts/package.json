@@ -1,0 +1,17 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "Protobuf ts data",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "generate": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit"
+  },
+  "dependencies": {
+    "@nestjs/microservices": "^12.1.0",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "ts-proto": "^2.12.4"
+  }
+}
